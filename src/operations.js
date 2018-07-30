@@ -39,7 +39,8 @@ module.exports = function(model, options, excludedMap) {
           options.contextFilter(contextModel, req, countFilteredContext => {
             buildQuery(
               countFilteredContext.count(),
-              Object.assign(req.erm.query, {
+              // Adjust not overview raw erm.query
+              Object.assign({}, req.erm.query, {
                 skip: 0,
                 limit: 0
               })
