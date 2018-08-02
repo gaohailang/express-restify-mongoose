@@ -108,7 +108,6 @@ module.exports = function (options) {
     }
 
     req.erm = req.erm || {}
-    console.log(parseQueryOptions(query))
     req.erm.query = parseQueryOptions(query)
 
     next()

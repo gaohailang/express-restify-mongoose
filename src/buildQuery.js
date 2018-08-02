@@ -22,7 +22,6 @@ module.exports = function(options) {
       if (queryOptions.limit && query.op !== 'count' && !queryOptions.distinct) {
         query.limit(queryOptions.limit)
       }
-      console.log(queryOptions)
       if (queryOptions.sort) {
         query.sort(queryOptions.sort)
       }
